@@ -1,4 +1,4 @@
-import { useRoutes, Navigate, redirect } from "react-router-dom";
+import { useRoutes, Navigate } from "react-router-dom";
 import PDDiscover from "../pages/discover";
 import PDFollow from "../pages/follow";
 import PDMine from "../pages/mine";
