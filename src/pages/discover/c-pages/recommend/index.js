@@ -1,24 +1,24 @@
-import React, { memo, useEffect } from 'react';
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import React, { memo } from 'react';
+
+import PDTopBanner from './c-cpns/top-banners';
 
 import {
-  getBanner
-} from './store/actionCreators';
+  RecommendWraper,
+  Content,
+  RecommendLeft,
+  RecommendRight
+} from './style';
 
 const Recommend = memo(() => {
-  const dispatch = useDispatch();
-  const state = useSelector(state => ({
-    banners: state.getIn(["recommend", "topBanners"])
-  }), shallowEqual)
-
-  useEffect(() => {
-    dispatch(getBanner());
-  }, [dispatch]);
 
   return (
-    <>
-      <div>Recommend</div>
-    </>
+    <RecommendWraper>
+      <PDTopBanner/>
+      <Content className='wrap-v2'>
+        <RecommendLeft></RecommendLeft>
+        <RecommendRight></RecommendRight>
+      </Content>
+    </RecommendWraper>
   )
 })
 

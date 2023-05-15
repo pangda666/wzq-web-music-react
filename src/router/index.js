@@ -1,13 +1,16 @@
 import { useRoutes, Navigate } from "react-router-dom";
+// 一级路由
 import PDDiscover from "../pages/discover";
 import PDFollow from "../pages/follow";
 import PDMine from "../pages/mine";
-import Recommend from "../pages/discover/c-pages/recommend";
-import Album from "../pages/discover/c-pages/album";
-import Artist from "../pages/discover/c-pages/artist";
-import Djradio from "../pages/discover/c-pages/djradio";
+
+// 二级路由
+import Recommend from "../pages/discover/c-pages/recommend"; // 推荐
+import Album from "../pages/discover/c-pages/album"; // 歌单
+import Artist from "../pages/discover/c-pages/artist"; // 
+import Djradio from "../pages/discover/c-pages/djradio"; // 主播电台
 import Ranking from "../pages/discover/c-pages/ranking";
-import Songs from "../pages/discover/c-pages/songs";
+import Songs from "../pages/discover/c-pages/songs"; //
 
 
 const CustomRouter = () => {

@@ -7,12 +7,14 @@ export function getTopBanner() {
   })
 }
 
+// 热门推荐查询
 export function getHotRecommend() {
   return request({
     url: "/personalized"
   })
 }
 
+// 专辑获取
 export function getNewAlbum(limit, offset) {
   return request({
     url: "/top/album",

@@ -2,7 +2,7 @@ import * as actionTypes from "./constants";
 
 import { 
   getTopBanner,
-  // getHotRecommend,
+  getHotRecommend,
   // getNewAlbum,
   // getTopList,
   // getArtistList
@@ -13,6 +13,11 @@ const changeBannerAction = (res) => ({
   banners: res.banners
 });
 
+const changeRecommendAction = (res) => ({
+  type: actionTypes.CHANGE_HOT_RECOMMEND,
+  recommends: res.result
+});
+
 // 获取banner数据
 export const getBanner = () => {
   return dispatch => {
@@ -21,3 +26,12 @@ export const getBanner = () => {
     })
   }
 };
+
+// 获取热门推荐数据
+export const getRecommend = () => {
+  return dispatch => {
+    getHotRecommend().then(res => {
+      dispatch(changeRecommendAction(res))
+    })
+  }
+}
